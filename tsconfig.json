@@ -1,15 +1,23 @@
 {
+  /* Poetic base style configuration */
+  "extends": "./node_modules/poetic/config/typescript/tsconfig.json",
+  /* Add your custom configuration after this */
   "compilerOptions": {
-    "lib": ["es2017"],
-    "removeComments": true,
-    "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
     "target": "es2017",
-    "outDir": "lib"
+    "outDir": "dist",
+    "lib": ["es2017"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "jsx": "react",
+    "noEmit": true
   },
-  "include": ["./**/*.ts"],
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules/**/*",
     ".serverless/**/*",

@@ -5,7 +5,12 @@
   "main": "handler.js",
   "scripts": {
     "commit": "npx cz",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "code:check": "yarn code:lint; yarn code:format --check",
+    "code:clean": "yarn code:lint --fix; yarn code:format --write",
+    "code:lint": "eslint --ext .js,.jsx,.ts,.tsx \"src/\"",
+    "code:format": "prettier './src/**/**.{js,jsx,ts,tsx}'",
+    "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "dependencies": {
     "aws-lambda": "^1.0.6",
@@ -20,6 +25,7 @@
     "cz-conventional-changelog": "3.3.0",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
     "husky": "^4.3.0",
+    "poetic": "^1.6.0",
     "serverless": "^2.1.1",
     "serverless-offline": "^6.7.0",
     "serverless-webpack": "^5.2.0",
