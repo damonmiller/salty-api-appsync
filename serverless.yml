@@ -1,10 +1,10 @@
-service: 
+service:
   name: salty-api-appsync
 
 frameworkVersion: '2'
 
-custom: 
-  webpack: 
+custom:
+  webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
 
@@ -12,7 +12,7 @@ plugins:
   - serverless-webpack
   - serverless-offline # must be last
 
-provider: 
+provider:
   name: aws
   runtime: nodejs12.x
   stage: ${opt:stage, 'dev'}
@@ -20,15 +20,15 @@ provider:
   logRetentionInDays: 90
   deploymentBucket:
     blockPublicAccess: true
-  apiGateway: 
+  apiGateway:
     minimumCompressionSize: 1024
-  environment: 
+  environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
 
-functions: 
-  hello: 
-    handler: handler.hello
-    events: 
-      - http: 
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
           method: get
           path: hello
