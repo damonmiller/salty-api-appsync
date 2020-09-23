@@ -12,12 +12,14 @@
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^11.0.0",
     "@types/aws-lambda": "^8.10.17",
     "@types/node": "^10.12.18",
     "@types/serverless": "^1.72.5",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "3.3.0",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "husky": "^4.3.0",
     "serverless": "^2.1.1",
     "serverless-offline": "^6.7.0",
     "serverless-webpack": "^5.2.0",
@@ -32,6 +34,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
