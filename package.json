@@ -21,10 +21,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --write",
-    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
