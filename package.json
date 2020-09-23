@@ -1,10 +1,17 @@
 {
   "name": "salty-api-appsync",
   "version": "1.0.0",
-  "description": "Serverless webpack example using Typescript",
+  "description": "An opinionated AWS AppSync API starter project",
+  "homepage": "https://github.com/damonmiller/salty-api-appsync#readme",
+  "bugs": {
+    "url": "https://github.com/damonmiller/salty-api-appsync/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damonmiller/salty-api-appsync.git"
+  },
   "license": "MIT",
-  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
-  "main": "handler.js",
+  "author": "Damon Miller <damonmiller513@gmail.com>",
   "scripts": {
     "code:check": "yarn code:lint && yarn code:format --check",
     "code:check:rules": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
